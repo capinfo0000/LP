@@ -668,7 +668,7 @@
 
 /* ---------- RISK (CRIMSON) ---------- */
 .risk-section {
-  background: var(--crimson-deep);
+  background: var(--ink);
   color: #fff;
   padding: var(--section-pad) 0;
   position: relative;
@@ -676,7 +676,7 @@
 }
 .risk-section::before {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 70% 0%, rgba(168,44,44,0.5), transparent 60%);
+  background: radial-gradient(circle at 70% 0%, rgba(201,169,104,0.06), transparent 50%);
   pointer-events: none;
 }
 .crimson-section .label-en { color: var(--accent); }
