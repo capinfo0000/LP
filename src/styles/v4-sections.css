@@ -65,9 +65,9 @@
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: start;
   position: relative;
 }
 .hero-eyebrow {
