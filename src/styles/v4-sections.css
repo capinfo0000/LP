@@ -668,7 +668,7 @@
 
 /* ---------- RISK (CRIMSON) ---------- */
 .risk-section {
-  background: var(--crimson-dark);
+  background: var(--crimson-deep);
   color: #fff;
   padding: var(--section-pad) 0;
   position: relative;
@@ -692,6 +692,7 @@
   font-size: clamp(56px, 7vw, 104px);
   line-height: 1.05;
   letter-spacing: var(--ls-display);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.6);
 }
 .risk-banner-h2 em { color: var(--accent); }
 .risk-banner-sub {
@@ -770,6 +771,7 @@
   color: #fff;
   line-height: 1.1;
   letter-spacing: var(--ls-display);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.6);
 }
 .risk-mega-h em { color: var(--accent); }
 .risk-mega-sub {
