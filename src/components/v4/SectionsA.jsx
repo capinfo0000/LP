@@ -172,9 +172,9 @@ const Philosophy = () => (
       <div className="phil-cards">
         <article className="phil-card">
           <div className="phil-card-num">I.</div>
-          <h3 className="serif">「円しか持っていない」のは、円に全額投資しているのと同じだ。</h3>
-          <p>円だけを貯金しているということは、日本という一つの国の通貨に、資産の100%を賭けているということ。これは、分散していない「超ハイリスク」な状態だと気づいているだろうか。</p>
-          <p className="phil-card-pull">分散しないこと、それが最大のリスク。</p>
+          <h3 className="serif">投資が怖い？　でも、あなたはもう投資している。</h3>
+          <p>銀行に預けている時点で、資産の100%は「円」という通貨に投資されている。日本という一つの国の経済に、全額を賭けている状態だ。「投資しない」という選択肢は、最初から存在しない。</p>
+          <p className="phil-card-pull">あなたはもう、投資している。──全額、円に。</p>
         </article>
         <article className="phil-card">
           <div className="phil-card-num">II.</div>
@@ -185,9 +185,9 @@ const Philosophy = () => (
         </article>
         <article className="phil-card">
           <div className="phil-card-num">III.</div>
-          <h3 className="serif">分散投資は「攻め」じゃない。これは「守り」だ。</h3>
-          <p>資産を守るために、複数の通貨や資産に分けておく。決してギャンブルではなく、リスクを分散させる防御策。少額でもいい。若いうちから始めることが、何よりも大切なんだ。</p>
-          <p className="phil-card-pull">少額でいい。続けることが、最大の武器。</p>
+          <h3 className="serif">だから、円以外にも分けておく。</h3>
+          <p>ドル、株式、債券——通貨や資産を複数に分けておけば、円が下がってもどこかが上がる。これが「分散投資」の本質。ギャンブルではなく、リスクを散らす防御策だ。少額でいい。若いうちから始めることが、何よりも大切。</p>
+          <p className="phil-card-pull">円以外にも目を向ける。それが、本当の守り。</p>
         </article>
       </div>
 
