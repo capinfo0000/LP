@@ -1539,3 +1539,9 @@
   .you-tag { justify-self: start; }
   .loss-bar { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* Generic lede style — gold left rule under every section H2 */
+.lede {
+  border-left: 2px solid var(--accent);
+  padding-left: 20px;
+}

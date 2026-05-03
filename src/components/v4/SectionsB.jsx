@@ -19,7 +19,7 @@ const Data = () => (
 
       <div className="data-h">
         <FadeRise><h2 className="serif jp-keep">データが語る、<br/>厳しい現実<em>。</em></h2></FadeRise>
-        <FadeRise delay={100}><p>感覚ではなく、事実として知っておいてほしい。<br/>数字は、嘘をつかない。</p></FadeRise>
+        <FadeRise delay={100}><p className="lede">感覚ではなく、事実として知っておいてほしい。<br/>数字は、嘘をつかない。</p></FadeRise>
       </div>
 
       <div className="stat-row">
@@ -188,7 +188,7 @@ const Solution = () => {
         <div className="sol-h">
           <FadeRise><h2 className="serif jp-keep">だから、<br/>この講座がある<em>。</em></h2></FadeRise>
           <FadeRise delay={100}>
-            <p>
+            <p className="lede">
               「我慢しない節約」×「少額からの資産形成」。<br/>
               推しも、旅行も、趣味も諦めない。<br/>
               でも、確実に資産を築いていく。

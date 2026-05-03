@@ -77,7 +77,7 @@ const ThreeFutures = () => {
             </h2>
           </FadeRise>
           <FadeRise delay={120}>
-            <p className="sub">
+            <p className="sub lede">
               これは、知識じゃない。<br/>
               一生、あなたを支える構造。
             </p>

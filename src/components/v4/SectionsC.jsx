@@ -27,7 +27,7 @@ const Curriculum = () => {
         <div className="curr-h">
           <FadeRise><h2 className="serif jp-keep">3ヶ月で、<br/>人生が変わる<em>。</em></h2></FadeRise>
           <FadeRise delay={100}>
-            <p className="muted" style={{ fontSize: 17, marginTop: 16, maxWidth: "32ch" }}>
+            <p className="muted lede" style={{ fontSize: 17, marginTop: 16, maxWidth: "32ch" }}>
               段階的に学び、確実に身につく実践カリキュラム。
             </p>
           </FadeRise>
@@ -109,7 +109,7 @@ const Benefits = () => {
         <div className="bene-h">
           <FadeRise><h2 className="serif jp-keep">この講座で、<br/>あなたが得られるもの<em>。</em></h2></FadeRise>
           <FadeRise delay={100}>
-            <p className="muted" style={{ fontSize: 17, marginTop: 16 }}>具体的な成果と、一生使える知識。</p>
+            <p className="muted lede" style={{ fontSize: 17, marginTop: 16 }}>具体的な成果と、一生使える知識。</p>
           </FadeRise>
         </div>
 
@@ -188,7 +188,7 @@ const Story = () => {
         <div className="story-intro">
           <FadeRise><h2 className="story-title serif jp-keep">あなたの、<br/>これからの物語<em>。</em></h2></FadeRise>
           <FadeRise delay={100}>
-            <p className="muted" style={{ fontSize: 17 }}>
+            <p className="muted lede" style={{ fontSize: 17 }}>
               受講生たちが歩んだ、<br/>未来への道のり。
             </p>
           </FadeRise>
@@ -248,7 +248,7 @@ const Offer = () => {
         <div className="offer-h">
           <FadeRise><h2 className="serif jp-keep">今すぐ、<br/>一歩を踏み出す<em>。</em></h2></FadeRise>
           <FadeRise delay={100}>
-            <p className="muted" style={{ fontSize: 17, marginTop: 16 }}>人生を変える3ヶ月間の投資。</p>
+            <p className="muted lede" style={{ fontSize: 17, marginTop: 16 }}>人生を変える3ヶ月間の投資。</p>
           </FadeRise>
         </div>
 
@@ -335,7 +335,7 @@ const Final = () => (
         </FadeRise>
         <div className="final-actions">
           <FadeRise delay={100}>
-            <p className="final-sub">未来は、今日の一歩から始まる。</p>
+            <p className="final-sub lede">未来は、今日の一歩から始まる。</p>
           </FadeRise>
           <FadeRise delay={200}>
             <p className="final-sub2">
