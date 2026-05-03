@@ -340,8 +340,8 @@
 .invert p { color: rgba(255,255,255,0.78); }
 
 .phil-intro {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-  align-items: end;
+  display: grid; grid-template-columns: 1fr; gap: 32px;
+  align-items: start;
   margin-bottom: 80px;
 }
 .phil-intro h2 { color: #fff; font-size: clamp(48px, 5.5vw, 80px); }
