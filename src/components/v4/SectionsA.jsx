@@ -174,17 +174,20 @@ const Philosophy = () => (
           <div className="phil-card-num">I.</div>
           <h3 className="serif">「円しか持っていない」のは、円に全額投資しているのと同じだ。</h3>
           <p>円だけを貯金しているということは、日本という一つの国の通貨に、資産の100%を賭けているということ。これは、分散していない「超ハイリスク」な状態だと気づいているだろうか。</p>
+          <p className="phil-card-pull">分散しないこと、それが最大のリスク。</p>
         </article>
         <article className="phil-card">
           <div className="phil-card-num">II.</div>
           <h3 className="serif">インフレ年率2%で、20年後には購買力が約3割減る</h3>
-          <p>通帳の数字は100万円のまま。でも、その100万円で買えるものは、20年前の70万円分しかない。</p>
+          <p>日銀は「年2%のインフレ」を国の目標に掲げ、通貨を発行し続けている。つまり、円の価値は計画的に下げられている。</p>
+          <p>20年後、今の100万円で買えるのは70万円分。通帳の数字は変わらなくても、買えるものは確実に減っていく。</p>
           <p className="phil-card-pull">預金は「減らない」が、価値は「確実に減っている」</p>
         </article>
         <article className="phil-card">
           <div className="phil-card-num">III.</div>
           <h3 className="serif">分散投資は「攻め」じゃない。これは「守り」だ。</h3>
           <p>資産を守るために、複数の通貨や資産に分けておく。決してギャンブルではなく、リスクを分散させる防御策。少額でもいい。若いうちから始めることが、何よりも大切なんだ。</p>
+          <p className="phil-card-pull">少額でいい。続けることが、最大の武器。</p>
         </article>
       </div>
 
