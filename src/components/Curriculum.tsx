@@ -1,10 +1,78 @@
-import { useState } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ChevronUp, Calendar } from 'lucide-react';
 
 export const Curriculum = () => {
-  const { elementRef, isVisible } = useIntersectionObserver({ threshold: 0.2 });
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const [openMonth, setOpenMonth] = useState<number | null>(1);
+  const [autoMode, setAutoMode] = useState(true);
+  const cardRefs = useRef<Map<number, HTMLDivElement | null>>(new Map());
+  const intersectingMonthsRef = useRef<Set<number>>(new Set());
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!autoMode) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const month = Number((entry.target as HTMLElement).dataset.month);
+          if (entry.isIntersecting) {
+            intersectingMonthsRef.current.add(month);
+          } else {
+            intersectingMonthsRef.current.delete(month);
+          }
+        });
+
+        if (intersectingMonthsRef.current.size > 0) {
+          const latest = Math.max(...Array.from(intersectingMonthsRef.current));
+          setOpenMonth(latest);
+        }
+      },
+      { rootMargin: '0px 0px -40% 0px', threshold: 0 }
+    );
+
+    cardRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [autoMode]);
+
+  useEffect(() => {
+    if (autoMode) return;
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setAutoMode(true);
+          intersectingMonthsRef.current.clear();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [autoMode]);
+
+  const handleToggle = (month: number) => {
+    setOpenMonth((prev) => (prev === month ? null : month));
+    setAutoMode(false);
+  };
 
   const curriculum = [
     {
@@ -73,7 +141,7 @@ export const Curriculum = () => {
   };
 
   return (
-    <section ref={elementRef} className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-20 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl animate-float-reverse"></div>
@@ -99,6 +167,8 @@ export const Curriculum = () => {
               return (
                 <div
                   key={item.month}
+                  ref={(el) => { cardRefs.current.set(item.month, el); }}
+                  data-month={item.month}
                   className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                   style={{ transitionDelay: isVisible ? delay : '0ms' }}
                 >
@@ -108,39 +178,45 @@ export const Curriculum = () => {
                     </div>
 
                     <div className="md:ml-24">
-                      <button
-                        onClick={() => setOpenMonth(isOpen ? null : item.month)}
-                        className={`w-full bg-gradient-to-br ${colors.gradient} backdrop-blur-sm p-6 rounded-2xl border-2 ${colors.border}/30 hover:${colors.border}/50 transition-all duration-300 hover:scale-102`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="text-left">
-                            <div className={`inline-block px-4 py-1 ${colors.bgLight} rounded-full mb-3`}>
-                              <span className={`${colors.text} font-bold text-lg`}>第{item.month}ヶ月</span>
-                            </div>
-                            <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                          </div>
-                          {isOpen ? (
-                            <ChevronUp className={`w-8 h-8 ${colors.text} flex-shrink-0`} />
-                          ) : (
-                            <ChevronDown className={`w-8 h-8 ${colors.text} flex-shrink-0`} />
-                          )}
-                        </div>
-
-                        <div className={`overflow-hidden transition-all duration-500 ${isOpen ? 'max-h-96 mt-6' : 'max-h-0'}`}>
-                          <div className="space-y-3">
-                            {item.topics.map((topic, topicIndex) => (
-                              <div
-                                key={topicIndex}
-                                className={`flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-                                style={{ transitionDelay: isOpen ? `${topicIndex * 100}ms` : '0ms' }}
-                              >
-                                <div className={`w-2 h-2 ${colors.bg} rounded-full mt-2 flex-shrink-0`}></div>
-                                <p className="text-lg text-blue-100">{topic}</p>
+                      <div className={`bg-gradient-to-br ${colors.gradient} backdrop-blur-sm rounded-2xl border-2 ${colors.border}/30 transition-colors duration-300`}>
+                        <button
+                          type="button"
+                          onClick={() => handleToggle(item.month)}
+                          className="w-full p-6 text-left"
+                          aria-expanded={isOpen}
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="text-left flex-1 min-w-0">
+                              <div className={`inline-block px-4 py-1 ${colors.bgLight} rounded-full mb-3`}>
+                                <span className={`${colors.text} font-bold text-lg`}>第{item.month}ヶ月</span>
                               </div>
-                            ))}
+                              <h3 className="text-xl md:text-2xl font-bold text-white">{item.title}</h3>
+                            </div>
+                            {isOpen ? (
+                              <ChevronUp className={`w-7 h-7 md:w-8 md:h-8 ${colors.text} flex-shrink-0`} />
+                            ) : (
+                              <ChevronDown className={`w-7 h-7 md:w-8 md:h-8 ${colors.text} flex-shrink-0`} />
+                            )}
+                          </div>
+                        </button>
+
+                        <div className={`grid transition-all duration-500 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                          <div className="overflow-hidden">
+                            <div className="px-6 pb-6 space-y-3">
+                              {item.topics.map((topic, topicIndex) => (
+                                <div
+                                  key={topicIndex}
+                                  className={`flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+                                  style={{ transitionDelay: isOpen ? `${topicIndex * 80}ms` : '0ms' }}
+                                >
+                                  <div className={`w-2 h-2 ${colors.bg} rounded-full mt-2 flex-shrink-0`}></div>
+                                  <p className="text-base md:text-lg text-blue-100">{topic}</p>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
