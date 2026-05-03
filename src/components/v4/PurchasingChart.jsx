@@ -4,7 +4,7 @@ import { useState } from 'react';
 const PurchasingChart = () => {
   const [hover, setHover] = useState(null);
   const W = 560, H = 360;
-  const padL = 56, padR = 24, padT = 28, padB = 44;
+  const padL = 56, padR = 56, padT = 28, padB = 44;
   const innerW = W - padL - padR, innerH = H - padT - padB;
   const years = 20;
 

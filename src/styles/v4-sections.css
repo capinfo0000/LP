@@ -1307,11 +1307,12 @@
 }
 .now-amt {
   font-family: var(--serif); font-weight: 900;
-  font-size: clamp(72px, 9vw, 120px);
+  font-size: clamp(56px, 6.5vw, 88px);
   color: #fff;
   line-height: 1;
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .now-amt .yen { color: var(--accent); font-size: 0.55em; margin-right: 0.05em; }
 .now-meta {
