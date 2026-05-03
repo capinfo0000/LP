@@ -692,9 +692,8 @@
   font-size: clamp(56px, 7vw, 104px);
   line-height: 1.05;
   letter-spacing: var(--ls-display);
-  text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.6);
 }
-.risk-banner-h2 em { color: var(--accent); }
+.risk-banner-h2 em { color: var(--accent-soft); }
 .risk-banner-sub {
   margin-top: 24px;
   font-family: var(--serif); font-weight: 500;
@@ -771,8 +770,8 @@
   color: #fff;
   line-height: 1.1;
   letter-spacing: var(--ls-display);
-  text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.6);
 }
+.risk-mega-h em { color: var(--accent-soft); }
 .risk-mega-h em { color: var(--accent); }
 .risk-mega-sub {
   margin-top: 24px;
