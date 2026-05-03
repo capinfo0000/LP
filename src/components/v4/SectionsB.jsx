@@ -14,7 +14,7 @@ const Data = () => (
           <div className="label-en">— DATA · 厳しい現実</div>
           <div className="label-jp">事実だけが、未来を変える。</div>
         </div>
-        <div className="you-tag">— これは、あなたの話だ。</div>
+        <div className="you-tag">— 数字は、嘘をつかない。</div>
       </div>
 
       <div className="data-h">
@@ -100,7 +100,7 @@ const Risk = () => {
             <div className="label-en">— SCENARIO · 10年後の分岐</div>
             <div className="label-jp">未来は、二つに分かれる。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— 分岐点は、今ここに。</div>
         </div>
 
         <div className="risk-banner">
@@ -182,7 +182,7 @@ const Solution = () => {
             <div className="label-en">— SOLUTION · 4本柱</div>
             <div className="label-jp">だから、この講座がある。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— 道は、ちゃんとある。</div>
         </div>
 
         <div className="sol-h">

@@ -21,7 +21,7 @@ const Curriculum = () => {
             <div className="label-en">— CURRICULUM · 3ヶ月の構成</div>
             <div className="label-jp">段階的に学び、確実に身につく。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— 3ヶ月、本気でやろう。</div>
         </div>
 
         <div className="curr-h">
@@ -103,7 +103,7 @@ const Benefits = () => {
             <div className="label-en">— BENEFITS · 持ち帰るもの</div>
             <div className="label-jp">具体的な成果と、一生使える知識。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— 持ち帰るのは、一生もの。</div>
         </div>
 
         <div className="bene-h">
@@ -182,7 +182,7 @@ const Story = () => {
             <div className="label-en">— FEATURE · これからの物語</div>
             <div className="label-jp">受講生たちが歩んだ道のり。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— 次は、あなたの番。</div>
         </div>
 
         <div className="story-intro">

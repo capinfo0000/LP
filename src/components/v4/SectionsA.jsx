@@ -104,7 +104,7 @@ const Empathy = () => {
             <div className="label-en">— EMPATHY · あなたの本音</div>
             <div className="label-jp">そう、今のあなたの気持ちは正しい。</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— あなたは、ひとりじゃない。</div>
         </div>
 
         <div className="empathy-grid">
@@ -159,7 +159,7 @@ const Philosophy = () => (
           <div className="label-en">— PHILOSOPHY · 知っているか、知らないか</div>
           <div className="label-jp">少し、耳が痛い話を。</div>
         </div>
-        <div className="you-tag">— これは、あなたの話だ。</div>
+        <div className="you-tag">— 知ることから、はじまる。</div>
       </div>
 
       <div className="phil-intro">

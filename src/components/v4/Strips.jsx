@@ -67,7 +67,7 @@ const ThreeFutures = () => {
             <div className="label-en">— FUTURES · 3つの未来</div>
             <div className="label-jp">あなたが、3ヶ月で手に入れるもの</div>
           </div>
-          <div className="you-tag">— これは、あなたの話だ。</div>
+          <div className="you-tag">— あなたが、選ぶ未来。</div>
         </div>
 
         <div className="tf-h">
