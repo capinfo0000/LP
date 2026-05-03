@@ -1282,8 +1282,10 @@
   margin-bottom: 24px;
 }
 .pricing-row {
-  display: flex; justify-content: space-between; align-items: baseline;
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 6px;
   padding-bottom: 12px;
+  padding-right: 120px;
 }
 .pricing-label {
   font-family: var(--sans-en); font-size: 11px;
