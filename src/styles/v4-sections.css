@@ -254,8 +254,8 @@
 
 .empathy-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  gap: 64px;
   align-items: start;
   margin-bottom: 100px;
 }
