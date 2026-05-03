@@ -668,7 +668,7 @@
 
 /* ---------- RISK (CRIMSON) ---------- */
 .risk-section {
-  background: var(--crimson-deep);
+  background: var(--crimson-dark);
   color: #fff;
   padding: var(--section-pad) 0;
   position: relative;
@@ -697,14 +697,14 @@
 .risk-banner-sub {
   margin-top: 24px;
   font-family: var(--serif); font-weight: 500;
-  font-size: 19px; color: rgba(255,255,255,0.75);
+  font-size: 19px; color: rgba(255,255,255,0.92);
 }
 
 .risk-tabs-guide {
   text-align: center;
-  font-family: var(--sans-en); font-size: 10px;
+  font-family: var(--sans-en); font-size: 11px;
   letter-spacing: var(--ls-label); text-transform: uppercase;
-  color: var(--accent); font-weight: 600;
+  color: rgba(255,255,255,0.75); font-weight: 600;
   margin-bottom: 16px;
 }
 .risk-tabs {
@@ -762,7 +762,7 @@
   color: var(--accent); line-height: 1;
 }
 .risk-row-body h4 { color: #fff; margin-bottom: 8px; font-size: 19px; }
-.risk-row-body p { color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.7; margin: 0; }
+.risk-row-body p { color: rgba(255,255,255,0.92); font-size: 15px; line-height: 1.7; margin: 0; }
 
 .risk-mega { text-align: center; margin-top: 100px; }
 .risk-mega-h {
@@ -775,7 +775,7 @@
 .risk-mega-sub {
   margin-top: 24px;
   font-family: var(--serif); font-weight: 500;
-  font-size: 19px; color: rgba(255,255,255,0.75);
+  font-size: 19px; color: rgba(255,255,255,0.92);
 }
 .risk-section-cta { margin-top: 40px; }
 
