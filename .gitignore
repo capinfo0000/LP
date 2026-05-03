@@ -21,3 +21,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Local scratch — screenshots, Claude tooling, design exports
+*.png
+*.jpg
+*.jpeg
+.claude/
+.playwright-mcp/
+/節約資産形成LP*/
