@@ -34,14 +34,14 @@ export const RiskSection = () => {
             </button>
           </div>
 
-          <div className="relative min-h-[500px] perspective-1000">
+          <div className="relative min-h-[720px] sm:min-h-[600px] md:min-h-[500px] perspective-1000">
             <div className={`absolute inset-0 transition-all duration-700 ${!showAfter ? 'opacity-100 rotate-y-0' : 'opacity-0 rotate-y-90 pointer-events-none'}`}>
-              <div className="bg-gradient-to-br from-slate-800/90 to-red-900/40 backdrop-blur-sm p-8 rounded-3xl border border-red-500/30 h-auto animate-shake">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 bg-red-500/20 rounded-full">
-                    <CloudRain className="w-12 h-12 text-red-400" />
+              <div className="bg-gradient-to-br from-slate-800/90 to-red-900/40 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-red-500/30 h-auto animate-shake">
+                <div className="flex items-center gap-3 md:gap-4 mb-6">
+                  <div className="p-3 md:p-4 bg-red-500/20 rounded-full shrink-0">
+                    <CloudRain className="w-9 h-9 md:w-12 md:h-12 text-red-400" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">10年後のあなた（何もしなかった場合）</h3>
+                  <h3 className="text-xl md:text-3xl font-bold text-white">10年後のあなた（何もしなかった場合）</h3>
                 </div>
 
                 <div className="space-y-4">
@@ -66,12 +66,12 @@ export const RiskSection = () => {
             </div>
 
             <div className={`absolute inset-0 transition-all duration-700 ${showAfter ? 'opacity-100 rotate-y-0' : 'opacity-0 -rotate-y-90 pointer-events-none'}`}>
-              <div className="bg-gradient-to-br from-slate-800/90 to-blue-900/40 backdrop-blur-sm p-8 rounded-3xl border border-blue-500/30 h-auto">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 bg-blue-500/20 rounded-full">
-                    <Sun className="w-12 h-12 text-blue-400" />
+              <div className="bg-gradient-to-br from-slate-800/90 to-blue-900/40 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-blue-500/30 h-auto">
+                <div className="flex items-center gap-3 md:gap-4 mb-6">
+                  <div className="p-3 md:p-4 bg-blue-500/20 rounded-full shrink-0">
+                    <Sun className="w-9 h-9 md:w-12 md:h-12 text-blue-400" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">10年後のあなた（行動した場合）</h3>
+                  <h3 className="text-xl md:text-3xl font-bold text-white">10年後のあなた（行動した場合）</h3>
                 </div>
 
                 <div className="space-y-5">
