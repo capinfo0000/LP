@@ -43,7 +43,7 @@ export const CTA = () => {
           </h2>
 
           <p className={`text-xl md:text-2xl text-blue-100 mb-4 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            変わるのは、今しかない。
+            未来は、今日の一歩から始まる。
           </p>
 
           <p className={`text-lg text-blue-200 mb-12 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
